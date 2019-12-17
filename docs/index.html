@@ -4,13 +4,26 @@
     <title>Word Watch 👀</title>
     <script src="bundle.js"></script>
     <meta name="viewport" content="width=device-width"/>
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+
+		 $('#ajaxBtn').click(function(){
+
+			$.post('https://wordwatch-api.herokuapp.com/api/v1/words',   // url
+			   { myData: { "word": { "value": "bahhumbug" } } }, // data to submit
+			   function(data, status, jqXHR) {// success callback
+						$('p').append('status: ' + status + ', data: ' + data);
+				});
+			});
+    });
+    </script> -->
   </head>
   <body>
     <main>
       <section class="text-submission">
         <h2 tabindex="0">Word <span>Watch</span> 👀</h2>
         <textarea placeholder="Paste text here"></textarea>
-        <button>Break down</button>
+        <button id='ajaxBtn'>Break down</button>
       </section>
 
       <section class="word-data" tabindex="0">
